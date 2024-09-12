@@ -54,4 +54,4 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/apps:${{ env.NEXT_VERSION }}  # Tag with the new version
+          ${{ secrets.DOCKER_USERNAME }}/apps:${{ env.NEXT_VERSION }}
