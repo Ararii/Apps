@@ -21,7 +21,7 @@
         <div class="col-md-6"><br><br><br><br><br><br>
 
             <div class="text-container">
-                <h1 style="font-size : 30px" class="text-center mb-4">TOKO TEAJUS KOMPUTER</h1>
+                <h1 style="font-size : 30px" class="text-center mb-4">TOKO JUST'in KOMPUTER</h1>
                 <p class="p-large text-center mb-4">Sistem Pakar Mengidentifikasi Kerusakan Pada Komputer <br> Berbasis Website Dengan Menggunakan Metode Forward Chaining</p>
                 <div class="row justify-content-center">
                     <a class="btn-solid-lg page-scroll" href="diagnosa.php">DIAGNOSA</a>
