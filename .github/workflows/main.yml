@@ -30,7 +30,8 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Extract version from Git tag
+ # Step 4: Extract version from Git tag or use 'latest' for branch pushes
+    - name: Extract version from Git reference
       id: extract_version
       run: |
         if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
@@ -39,7 +40,7 @@ jobs:
         else
           echo "VERSION=latest" >> $GITHUB_ENV
         fi
-        echo "Version is set to ${{ env.VERSION }}"
+        echo "Extracted version: ${{ env.VERSION }}"
 
     # Step 5: Build and push Docker image
     # Tag with the new version
@@ -50,4 +51,4 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/apps:${{ env.NEXT_VERSION }}
+          ${{ secrets.DOCKER_USERNAME }}/apps:${{ env.VERSION }}
